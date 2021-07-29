@@ -11,6 +11,10 @@
 		"files",
 		"index.d.ts"
 	],
+	"homepage": "https://github.com/snuffyDev/adapter-cloudflare-cache",
+	"repository": {
+		"url": "https://github.com/snuffyDev/adapter-cloudflare-cache"
+	},
 	"author": "snuffyDev",
 	"scripts": {
 		"lint": "eslint --ignore-path .gitignore \"**/*.{ts,js,svelte}\" && npm run check-format",
