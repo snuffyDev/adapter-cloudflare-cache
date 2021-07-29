@@ -11,7 +11,7 @@ __*Only updates to this repo will be for bug fixes, stability, or required funct
 ### Install
 
 ```sh
-npm install -D adapter-cloudflare-cache
+npm install -D @snuffydev/adapter-cloudflare-cache
 ```
 
 ## Original README Below
