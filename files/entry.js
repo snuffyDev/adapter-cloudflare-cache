@@ -2,8 +2,8 @@
 import { init, render } from '../output/server/app.js';
 // eslint-disable-line import/no-unresolved
 import { getAssetFromKV, NotFoundError } from '@cloudflare/kv-asset-handler';
+
 // eslint-disable-line import/no-unresolved
-import { isContentTypeTextual } from '@sveltejs/kit/adapter-utils';
 
 // eslint-disable-line import/no-unresolved
 
@@ -50,7 +50,7 @@ async function handle(event) {
 			host: request_url.host,
 			path: request_url.pathname,
 			query: request_url.searchParams,
-			rawBody: request.body ? await read(request) : null,
+			rawBody: await read(request),
 			headers: Object.fromEntries(request.headers),
 			method: request.method
 		});
@@ -80,10 +80,5 @@ async function handle(event) {
 
 /** @param {Request} request */
 async function read(request) {
-	const type = request.headers.get('content-type') || '';
-	if (isContentTypeTextual(type)) {
-		return request.text();
-	}
-
 	return new Uint8Array(await request.arrayBuffer());
 }

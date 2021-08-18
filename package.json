@@ -1,6 +1,6 @@
 {
 	"name": "@snuffydev/adapter-cloudflare-cache",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"type": "module",
 	"exports": {
 		"import": "./index.js"
@@ -26,6 +26,6 @@
 		"esbuild": "^0.12.5"
 	},
 	"devDependencies": {
-		"@sveltejs/kit": "1.0.0-next.138"
+		"@sveltejs/kit": "^1.0.0-next.153"
 	}
 }

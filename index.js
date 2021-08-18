@@ -16,7 +16,7 @@ import { fileURLToPath } from 'url';
 export default function (options = {}) {
 	/** @type {import('@sveltejs/kit').Adapter} */
 	const adapter = {
-		name: '@sveltejs/adapter-cloudflare-workers',
+		name: '@snuffydev/adapter-cloudflare-cache',
 		async adapt({ utils }) {
 			const { site } = validate_config(utils);
 
